@@ -8,20 +8,26 @@ namespace FizzbuzzApp
 {
     class Program
     {
+        public const int _firstNumber = 3;
+        public const int _secondNumber = 5;
+
+
         static void Main(string[] args)
         {
-            for(int i = 0; i <= 100; i++)
+
+            for(int i = 1; i <= 100; i++)
             {
-                if ((i % 3) == 0)
+                if ((i % _firstNumber) == 0 && (i % _secondNumber) == 0)
                 {
-                    Console.Write("fizz");
+                    Console.WriteLine("fizzbuzz");
                 }
-
-                if ((i % 5) == 0)
+                else if((i % _firstNumber) == 0)
                 {
-
+                    Console.WriteLine("fizz");
+                }
+                else if((i % _secondNumber) == 0)
+                {
                     Console.WriteLine("buzz");
-
                 }
                 else
                 {
